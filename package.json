@@ -1,0 +1,38 @@
+{
+  "name": "mnogoslovdna",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beloglazof/mnogoslovdna.git"
+  },
+  "keywords": [],
+  "author": "Slava Beloglazov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beloglazof/mnogoslovdna/issues"
+  },
+  "homepage": "https://github.com/beloglazof/mnogoslovdna#readme",
+  "devDependencies": {
+    "eslint": "^8.26.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "2.7.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.0.0"
+  }
+}
