@@ -1,0 +1,12 @@
+:root {
+  --dark-grey: rgb(128, 128, 128);
+  --black: rgb(32, 32, 32);
+  --font: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--black);
+}
