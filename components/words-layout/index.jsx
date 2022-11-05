@@ -1,8 +1,10 @@
-'use client';
+import Image from 'next/image';
 
-import WordCard from '../word-card';
+import wordsData from '@/lib/words-data.json';
 
 import s from './styles.module.css';
+
+const wordsById = wordsData.words_by_id;
 
 export default function WordsLayout({ words = [] }) {
   if (words?.length === 0) {
@@ -24,9 +26,11 @@ export default function WordsLayout({ words = [] }) {
 
   return (
     <div className={s.layout}>
-      {words.map(({ id, images: [{ responsiveImage }] }) => (
-        <WordCard key={id} image={responsiveImage} />
-      ))}
+      {words.map((id) => {
+        return (
+          <Image key={id} src={`/images/${id}.jpg`} alt={wordsById[id]} width={500} height={500} />
+        );
+      })}
     </div>
   );
 }
